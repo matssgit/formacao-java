@@ -17,14 +17,14 @@ public class ListaContatos {
             contatos.add("(91) 2416-8455 Mariza Gadelha Bastida Carneiro");
             contatos.add("(68) 3259-9390 Mirian Venancio Portela Ignacia");
 
-            Path arquivoDestino = Paths.get("C:\\arquivos\\lista-contatos.txt");
+            Path arquivoDestino = Paths.get("C:\\rocket\\lista-contatos.txt");
 
             if (arquivoDestino.getParent() != null) {
                 Files.createDirectories(arquivoDestino.getParent());
             }
 
             Files.write(arquivoDestino, contatos);
-            
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
